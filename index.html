@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Vitall - Instrucciones y Recursos</title>
+    <style>
+        :root {
+            --azul-oscuro: #0b1329;
+            --blanco: #ffffff;
+            --gris-claro: #f4f6f9;
+        }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: var(--gris-claro); 
+            color: #333; 
+        }
+        header { 
+            background: var(--azul-oscuro); 
+            color: var(--blanco); 
+            padding: 2.5rem 1rem; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 2rem auto; 
+            background: var(--blanco); 
+            padding: 2.5rem; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+        .imagen-container {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        /* Estilos para la tabla estilo Excel */
+        .tabla-seccion {
+            margin-top: 2.5rem;
+        }
+        .tabla-seccion h3 {
+            color: var(--azul-oscuro);
+            border-bottom: 2px solid var(--azul-oscuro);
+            padding-bottom: 0.5rem;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 1rem; 
+            background: white;
+        }
+        th, td { 
+            border: 1px solid #e1e4e8; 
+            padding: 14px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: var(--azul-oscuro); 
+            color: var(--blanco); 
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="titulo-principal">Contacto Vitall</h1>
+    </header>
+
+    <main class="container">
+        <section id="contenido">
+            <p id="texto-principal" style="font-size: 1.1rem; line-height: 1.6;"></p>
+            <div class="imagen-container">
+                <div id="imagen-destacada"></div>
+            </div>
+        </section>
+
+        <section class="tabla-seccion">
+            <h3 id="titulo-tabla">Información y Categorías</h3>
+            <div id="tabla-contenido"></div>
+        </section>
+    </main>
+
+    <!-- Scripts de Netlify CMS -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+</body>
+</html>

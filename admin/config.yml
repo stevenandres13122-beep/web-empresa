@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "paginas"
+    label: "Gestión de Página"
+    files:
+      - file: "index.html"
+        label: "Página Principal"
+        name: "home"
+        fields:
+          - {label: "Título Principal", name: "titulo", widget: "string"}
+          - {label: "Texto Principal de Instrucciones", name: "texto", widget: "text"}
+          - {label: "Imagen Principal", name: "imagen", widget: "image", required: false}
+          - {label: "Título de la Sección de Tabla", name: "titulo_tabla", widget: "string"}
+          - label: "Cuadro Estilo Excel (Categorías y Datos)"
+            name: "tabla_datos"
+            widget: "list"
+            fields:
+              - {label: "Categoría / Título", name: "categoria", widget: "string"}
+              - {label: "Descripción / Detalle", name: "detalle", widget: "text"}
+              - {label: "Imagen Opcional", name: "imagen_celda", widget: "image", required: false}
