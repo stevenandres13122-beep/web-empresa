@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto Vitall</title>
-    <!-- Tipografía moderna -->
+    <title>Catálogo 2026 - Contacto Vital</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -14,6 +13,7 @@
             --bg-color: #f4f6f9;
             --text-main: #2d3748;
             --text-muted: #718096;
+            --border-color: #e2e8f0;
         }
 
         body {
@@ -24,25 +24,19 @@
             color: var(--text-main);
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
         }
 
-        /* Contenedor principal estilo hoja elegante */
         .hoja-documento {
             width: 100%;
-            max-width: 800px;
+            max-width: 950px;
             background: #ffffff;
-            padding: 60px;
+            padding: 50px;
             box-shadow: 0 20px 40px rgba(11, 19, 41, 0.08);
             border-radius: 12px;
             position: relative;
-            overflow: hidden;
             box-sizing: border-box;
         }
 
-        /* Línea superior con colores de la marca */
         .hoja-documento::before {
             content: '';
             position: absolute;
@@ -51,20 +45,22 @@
             right: 0;
             height: 6px;
             background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
         }
 
         .encabezado-empresa {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #edf2f7;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 20px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .encabezado-empresa h1 {
             color: var(--primary);
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin: 0;
             font-weight: 700;
         }
@@ -80,29 +76,57 @@
             text-transform: uppercase;
         }
 
-        /* Estilos limpios para textos y párrafos */
-        .contenido-libre {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #4a5568;
+        h2.seccion-titulo {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
         }
 
-        .contenido-libre h2 {
-            color: var(--primary);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
+        p.intro-texto {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        /* Tablas elegantes y responsivas */
+        .tabla-contenedor {
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 12px 15px;
             font-weight: 600;
         }
 
-        .contenido-libre p {
-            margin-bottom: 20px;
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            color: #4a5568;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
         }
 
         .footer-hoja {
-            margin-top: 50px;
+            margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #edf2f7;
+            border-top: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -115,18 +139,182 @@
 
     <div class="hoja-documento">
         <div class="encabezado-empresa">
-            <h1>Contacto Vitall</h1>
-            <span class="tag-oficial">Documento Oficial</span>
+            <h1>Guía de Uso - Contacto Vital</h1>
+            <span class="tag-oficial">Catálogo Oficial 2026</span>
         </div>
 
-        <div class="contenido-libre">
-            <h2>Bienvenido</h2>
-            <p>Este es el diseño oficial limpio y profesional de tu página web. Todo se visualiza de forma impecable como un documento corporativo de alta calidad.</p>
+        <p class="intro-texto">
+            La presente guía técnica ha sido estructurada para proporcionar al personal de gestión y ventas una referencia precisa sobre la composición, beneficios y protocolos de aplicación de los productos del Catálogo 2026[cite: 1].
+        </p>
+
+        <!-- SECCIÓN 1 -->
+        <h2 class="seccion-titulo">Sección 1: Suplementos de Administración Oral</h2>
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Momento de la toma</th>
+                        <th>Beneficios Clave</th>
+                        <th>Modo de consumo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>MACA CAPS</strong></td>
+                        <td>En la mañana o al medio día, no de noche[cite: 1].</td>
+                        <td>Aumento de energía y resistencia física/mental; equilibrio hormonal; mejora de libido y salud sexual; apoyo a salud ósea[cite: 1].</td>
+                        <td>1 cápsula[cite: 1]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TIGER / VIGRA VEGETAL</strong></td>
+                        <td>Tomar 30-60 min antes del encuentro sexual[cite: 1].</td>
+                        <td>Optimización de la función eréctil; asistencia técnica para lograr y mantener erecciones firmes con eficacia clínica[cite: 1].</td>
+                        <td>1 cápsula duración de 4-5 horas[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DIA B-T CAPS</strong></td>
+                        <td>Con alimentos en el almuerzo o cena[cite: 1].</td>
+                        <td>Soporte al metabolismo de la glucosa; mantenimiento de niveles normales de azúcar en sangre; equilibrio energético metabólico[cite: 1].</td>
+                        <td>1 cápsula[cite: 1]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HGH CV</strong></td>
+                        <td>Preferiblemente con las comidas[cite: 1].</td>
+                        <td>Incremento de masa muscular y reducción de tejido adiposo; regeneración celular y mejora de la vitalidad general[cite: 1].</td>
+                        <td>(2) cápsulas día[cite: 1]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SLIM BURNER</strong></td>
+                        <td>Tomar con un vaso de agua antes de las comidas principales[cite: 1].</td>
+                        <td>Control de glucemia y soporte de insulina; procesamiento eficiente de grasas y optimización de la salud hepática[cite: 1].</td>
+                        <td>3 cápsulas[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PROSTA VITAL</strong></td>
+                        <td>Tomar después de una comida principal con un vaso de agua[cite: 1].</td>
+                        <td>Soporte integral de la salud prostática; favorece flujo urinario normal y reduce frecuencia de micción[cite: 1].</td>
+                        <td>1 cápsula al día[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TESTO VITAL</strong></td>
+                        <td>Tomar preferiblemente junto con los alimentos[cite: 1].</td>
+                        <td>Aumento de libido y deseo sexual; mejora la circulación, la energía y el rendimiento sexual físico[cite: 1].</td>
+                        <td>1 cápsula[cite: 1]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>POTENZIA MIEL</strong></td>
+                        <td>Tomarse 5 a 10 minutos antes de la actividad sexual[cite: 1].</td>
+                        <td>Mejora del rendimiento sexual; aumento de libido y efecto de bombeo ("pump") físico[cite: 1].</td>
+                        <td>Beber todo el sobre[cite: 1].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECCIÓN 2 -->
+        <h2 class="seccion-titulo">Sección 2: Parches de Uso Tópico</h2>
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>¿Qué es?</th>
+                        <th>Beneficios Principales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>DIABETIC PATCH</strong></td>
+                        <td>Parche de absorción transdérmica (24h)[cite: 1].</td>
+                        <td>Fórmula natural para el soporte en personas con Diabetes Tipo I y II[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HIPERTENSIÓN PATCH</strong></td>
+                        <td>Parche para salud cardiovascular[cite: 1].</td>
+                        <td>Apoyo a la salud arterial y mantenimiento de la presión sanguínea[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PARCHE PROSTÁTICO</strong></td>
+                        <td>Parche herbal de medicina tradicional[cite: 1].</td>
+                        <td>Alivio de micción frecuente, molestias de próstata y salud de la vejiga[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PARCHES PESO</strong></td>
+                        <td>Parche de liberación gradual de activos[cite: 1].</td>
+                        <td>Control del apetito; apoyo al metabolismo; quema de grasa y tonificación local[cite: 1].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECCIÓN 3 -->
+        <h2 class="seccion-titulo">Sección 3: Productos Tópicos (Cremas, Geles y Sprays)</h2>
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Tipo de Producto</th>
+                        <th>Beneficios Clave</th>
+                        <th>Modo de Uso Crítico / Sensorial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>STUD 100 / POTENZIA SPRAY</strong></td>
+                        <td>Spray retardante[cite: 1].</td>
+                        <td>Control de la eyaculación; mayor duración y satisfacción[cite: 1].</td>
+                        <td>Aplicar en el glande 5 minutos antes del acto sexual[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BIG XXL CREMA</strong></td>
+                        <td>Crema de aplicación local[cite: 1].</td>
+                        <td>Efecto temporal de volumen y mayor firmeza; retardante[cite: 1].</td>
+                        <td>Aplicar con miembro erecto/semierecto en forma de masaje 10-15 min antes[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MAXMAN GEL</strong></td>
+                        <td>Gel estimulante[cite: 1].</td>
+                        <td>Erecciones más firmes y retardante[cite: 1].</td>
+                        <td>Usar antes del encuentro. Lavar si hay sexo oral por sabor amargo[cite: 1].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECCIÓN 4 -->
+        <h2 class="seccion-titulo">Sección 4: Dispositivos y Accesorios Masculinos</h2>
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Beneficios Técnicos</th>
+                        <th>Especificación de Seguridad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ELASTIC RING</strong></td>
+                        <td>Anillo de constricción[cite: 1].</td>
+                        <td>Mantiene una erección más firme y duradera; retrasa la eyaculación[cite: 1].</td>
+                        <td>Mejora la firmeza por retención sanguínea local[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ELECTRIC PUMP</strong></td>
+                        <td>Bomba de vacío automática[cite: 1].</td>
+                        <td>Dispositivo no invasivo para inducir el flujo sanguíneo y tratar disfunción[cite: 1].</td>
+                        <td>No produce aumento permanente. Uso en rehabilitación[cite: 1].</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="footer-hoja">
-            <span>© Contacto Vitall</span>
-            <span>Plataforma Oficial</span>
+            <span>© 2026 Contacto Vital</span>
+            <span>Documento Interno de Gestión</span>
         </div>
     </div>
 
