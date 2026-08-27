@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto Vitall</title>
-    <!-- Tipografía moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Ocultamos de forma absoluta cualquier texto plano que caiga fuera de la hoja */
+        body > *:not(.hoja-documento) {
+            display: none !important;
+        }
+
         :root {
             --primary: #0b1329;
             --primary-light: #1c2a52;
@@ -27,9 +31,9 @@
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            overflow-x: hidden;
         }
 
-        /* Contenedor principal perfectamente centrado */
         .hoja-documento {
             width: 100%;
             max-width: 800px;
@@ -79,7 +83,6 @@
             text-transform: uppercase;
         }
 
-        /* Estilos tipográficos limpios */
         .contenido-libre {
             font-size: 1.05rem;
             line-height: 1.8;
@@ -116,10 +119,9 @@
             <span class="tag-oficial">Documento Oficial</span>
         </div>
 
-        <!-- Contenido limpio integrado directamente dentro de la hoja -->
         <div class="contenido-libre">
             <h2>Bienvenido</h2>
-            <p>Hola Soy stiven</p>
+            <p>Sony estaba ansioso por hacerse un hueco en el mercado de los videojuegos en rápida expansión...</p>
         </div>
 
         <div class="footer-hoja">
