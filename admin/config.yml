@@ -6,14 +6,11 @@ media_folder: "img"
 public_folder: "/img"
 
 collections:
-  - name: "paginas"
-    label: "Páginas de la Web"
+  - name: "documento"
+    label: "Documento Web"
     files:
       - file: "index.html"
-        label: "Página Principal (Contacto Vitall)"
-        name: "home"
+        label: "Hoja Principal"
+        name: "principal"
         fields:
-          - {label: "Título de la Empresa", name: "titulo", widget: "string"}
-          - label: "Contenido Libre (Estilo Word)"
-            name: "contenido_libre"
-            widget: "markdown"
+          - {label: "Contenido del Documento", name: "cuerpo", widget: "markdown"}
