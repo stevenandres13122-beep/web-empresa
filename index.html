@@ -1,6 +1,3 @@
----
-cuerpo: Hola Soy stiven
----
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -119,9 +116,10 @@ cuerpo: Hola Soy stiven
             <span class="tag-oficial">Documento Oficial</span>
         </div>
 
-        <!-- Aquí se mostrará tu contenido limpio -->
-        <div class="contenido-libre" id="cuerpo-web">
-            <p>Cargando contenido...</p>
+        <!-- Contenido limpio integrado directamente dentro de la hoja -->
+        <div class="contenido-libre">
+            <h2>Bienvenido</h2>
+            <p>Hola Soy stiven</p>
         </div>
 
         <div class="footer-hoja">
@@ -130,25 +128,5 @@ cuerpo: Hola Soy stiven
         </div>
     </div>
 
-    <!-- Script mágico para ocultar los textos feos de metadatos y mostrar solo lo que escribes -->
-    <script>
-        async function cargarPagina() {
-            try {
-                let respuesta = await fetch('index.html');
-                let htmlCrudo = await respuesta.text();
-                
-                // Extraemos lo que escribiste en el panel (lo que está después de "cuerpo:")
-                let textoUsuario = "Hola Soy stiven"; // Aquí leerá dinámicamente lo tuyo
-                
-                document.getElementById('cuerpo-web').innerHTML = `
-                    <h2>Bienvenido</h2>
-                    <p>${textoUsuario}</p>
-                `;
-            } catch (e) {
-                document.getElementById('cuerpo-web').innerHTML = `<p>Hola Soy stiven</p>`;
-            }
-        }
-        cargarPagina();
-    </script>
 </body>
 </html>
