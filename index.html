@@ -8,102 +8,95 @@ titulo_tabla: ASDASDA
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto Vitall - Instrucciones y Recursos</title>
+    <title>Contacto Vitall</title>
+    <!-- Importamos Netlify Identity widget para que reconozca tu sesión -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <style>
-        :root {
-            --azul-oscuro: #0b1329;
-            --blanco: #ffffff;
-            --gris-claro: #f4f6f9;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
         }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background: var(--gris-claro); 
-            color: #333; 
-        }
-        header { 
-            background: var(--azul-oscuro); 
-            color: var(--blanco); 
-            padding: 2.5rem 1rem; 
-            text-align: center; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        header {
+            background-color: #0b1329;
+            color: white;
+            padding: 2rem;
+            text-align: center;
         }
         header h1 {
             margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
+            font-size: 2.5rem;
         }
-        .container { 
-            max-width: 900px; 
-            margin: 2rem auto; 
-            background: var(--blanco); 
-            padding: 2.5rem; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-        }
-        .imagen-container {
-            margin: 1.5rem 0;
-            text-align: center;
-        }
-        img { 
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        /* Estilos para la tabla estilo Excel */
-        .tabla-seccion {
-            margin-top: 2.5rem;
-        }
-        .tabla-seccion h3 {
-            color: var(--azul-oscuro);
-            border-bottom: 2px solid var(--azul-oscuro);
-            padding-bottom: 0.5rem;
-        }
-        table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin-top: 1rem; 
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
             background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        th, td { 
-            border: 1px solid #e1e4e8; 
-            padding: 14px; 
-            text-align: left; 
+        h2 {
+            color: #0b1329;
+            border-bottom: 2px solid #0b1329;
+            padding-bottom: 10px;
         }
-        th { 
-            background-color: var(--azul-oscuro); 
-            color: var(--blanco); 
-            font-weight: 600;
+        /* Estilo de tabla moderna tipo Excel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #0b1329;
+            color: white;
         }
         tr:nth-child(even) {
-            background-color: #fafbfc;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 id="titulo-principal">Contacto Vitall</h1>
+        <h1 id="web-titulo">Contacto Vitall</h1>
     </header>
 
-    <main class="container">
-        <section id="contenido">
-            <p id="texto-principal" style="font-size: 1.1rem; line-height: 1.6;"></p>
-            <div class="imagen-container">
-                <div id="imagen-destacada"></div>
-            </div>
-        </section>
+    <div class="container">
+        <p id="web-texto" style="font-size: 1.1rem; line-height: 1.6;"></p>
+        
+        <h2 id="web-titulo-tabla">Información y Categorías</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoría / Título</th>
+                    <th>Detalle / Descripción</th>
+                </tr>
+            zte</thead>
+            <tbody id="web-tabla-cuerpo">
+                <!-- Las filas que agregues en el panel aparecerán aquí solas -->
+            </tbody>
+        </table>
+    </div>
 
-        <section class="tabla-seccion">
-            <h3 id="titulo-tabla">Información y Categorías</h3>
-            <div id="tabla-contenido"></div>
-        </section>
-    </main>
-
-    <!-- Scripts de Netlify CMS -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <!-- Script para conectar los datos de Decap CMS automáticamente -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.reload();
+            });
+          }
+        });
+      }
+    </script>
 </body>
 </html>
