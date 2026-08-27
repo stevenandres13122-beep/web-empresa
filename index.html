@@ -1,118 +1,65 @@
----
-titulo: ff
-texto: ASDASD
-titulo_tabla: ASDASDA
-tabla_datos:
-  - categoria: dwasdwasdwa
-    detalle: |+
-      asdwasdsaaswdwasd
-
-
-  - categoria: sawdsa
-    detalle: |-
-      wasdwasdwasd
-
-      lkjklkkjklkljlkjlk
-  - categoria: sdvdsfgdfsg
-    detalle: sdfsdfdsfdsf
-contenido_libre: |-
-  
-  nbvbbvnbvbnvbvnb
----
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto Vitall</title>
-    <!-- Importamos Netlify Identity widget para que reconozca tu sesión -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #e4e7eb;
             margin: 0;
-            padding: 0;
-            background-color: #f4f6f9;
-            color: #333;
+            padding: 40px 20px;
+            color: #2d3748;
+            display: flex;
+            justify-content: center;
         }
-        header {
-            background-color: #0b1329;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: #0b1329;
-            border-bottom: 2px solid #0b1329;
-            padding-bottom: 10px;
-        }
-        /* Estilo de tabla moderna tipo Excel */
-        table {
+        .hoja-documento {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+            max-width: 800px;
+            background: #ffffff;
+            padding: 60px 70px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 6px;
+            box-sizing: border-box;
+            min-height: 85vh;
         }
-        th, td {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            text-align: left;
+        .encabezado-empresa {
+            border-bottom: 2px solid #0b1329;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
         }
-        th {
-            background-color: #0b1329;
-            color: white;
+        .encabezado-empresa h1 {
+            color: #0b1329;
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: 700;
         }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+        .contenido-libre h2 {
+            color: #0b1329;
+            margin-top: 30px;
+            font-size: 1.4rem;
+        }
+        .contenido-libre p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #4a5568;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1 id="web-titulo">Contacto Vitall</h1>
-    </header>
+    <div class="hoja-documento">
+        <div class="encabezado-empresa">
+            <h1>Contacto Vitall</h1>
+        </div>
 
-    <div class="container">
-        <p id="web-texto" style="font-size: 1.1rem; line-height: 1.6;"></p>
-        
-        <h2 id="web-titulo-tabla">Información y Categorías</h2>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Categoría / Título</th>
-                    <th>Detalle / Descripción</th>
-                </tr>
-            zte</thead>
-            <tbody id="web-tabla-cuerpo">
-                <!-- Las filas que agregues en el panel aparecerán aquí solas -->
-            </tbody>
-        </table>
+        <div class="contenido-libre">
+            <h2>Documento Oficial</h2>
+            <p>Este es el nuevo diseño limpio y profesional de tu página web. Ya no hay tablas viejas ni elementos molestos; ahora tienes una hoja en blanco lista para mostrar tu contenido de manera impecable.</p>
+        </div>
     </div>
 
-    <!-- Script para conectar los datos de Decap CMS automáticamente -->
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.reload();
-            });
-          }
-        });
-      }
-    </script>
 </body>
 </html>
