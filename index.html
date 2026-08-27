@@ -12,7 +12,7 @@
             --bg-color: #f4f6f9;
             --text-main: #2d3748;
             --text-muted: #718096;
-            --border-color: #e2e8f0;
+            --border-color: #cbd5e1;
         }
 
         body {
@@ -47,7 +47,7 @@
         }
 
         .logo-area img {
-            height: 40px;
+            height: 45px;
             width: auto;
             object-fit: contain;
         }
@@ -70,15 +70,16 @@
             text-transform: uppercase;
         }
 
+        /* Cuadrícula de Fichas/Cuadros tipo Wiki */
         .productos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
         }
 
         .producto-card {
             background: #ffffff;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid var(--border-color);
@@ -94,12 +95,12 @@
 
         .producto-img-container {
             width: 100%;
-            height: 180px;
+            height: 200px;
             background: #f8fafc;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
             overflow: hidden;
         }
 
@@ -107,39 +108,55 @@
             max-height: 100%;
             max-width: 100%;
             object-fit: contain;
-            padding: 10px;
+            padding: 15px;
         }
 
         .producto-info {
-            padding: 18px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
             flex-grow: 1;
         }
 
         .producto-titulo {
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--primary);
             margin: 0;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
         }
 
-        .etiqueta-toma {
-            font-size: 0.75rem;
-            background: #eef2f7;
-            color: var(--primary);
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-            align-self: flex-start;
+        /* Bloque interno tipo cuadro/tabla de wiki para detalles */
+        .wiki-specs {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
-        .producto-info p {
-            margin: 0;
+        .spec-row {
+            display: flex;
+            flex-direction: column;
             font-size: 0.85rem;
+        }
+
+        .spec-label {
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .spec-value {
             color: var(--text-muted);
-            line-height: 1.5;
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -163,8 +180,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">MACA CAPS</h3>
-                    <span class="etiqueta-toma">Mañana o mediodía</span>
-                    <p>Aumento de energía, resistencia física/mental y equilibrio hormonal[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Momento de la toma</span>
+                            <span class="spec-value">En la mañana o al mediodía, no de noche[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Aumento de energía y resistencia física/mental; equilibrio hormonal; mejora de libido y salud ósea[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosificación</span>
+                            <span class="spec-value">1 cápsula[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -174,9 +203,21 @@
                     <img src="img/tigervegetal.png" alt="TIGER VEGETAL">
                 </div>
                 <div class="producto-info">
-                    <h3 class="producto-titulo">TIGER VEGETAL</h3>
-                    <span class="etiqueta-toma">30-60 min antes</span>
-                    <p>Optimización de la función eréctil y asistencia técnica para erecciones firmes[cite: 1].</p>
+                    <h3 class="producto-titulo">TIGER / VIGRA VEGETAL</h3>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Momento de la toma</span>
+                            <span class="spec-value">Tomar 30-60 min antes del encuentro sexual[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Optimización de la función eréctil; asistencia técnica para lograr y mantener erecciones firmes[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosificación y efecto</span>
+                            <span class="spec-value">1 cápsula (duración de 4-5 horas)[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -187,8 +228,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">DIA B-T CAPS</h3>
-                    <span class="etiqueta-toma">Almuerzo o cena</span>
-                    <p>Soporte al metabolismo de la glucosa y niveles normales de azúcar en sangre[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Momento de la toma</span>
+                            <span class="spec-value">Con alimentos en el almuerzo o cena[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Soporte al metabolismo de la glucosa; mantenimiento de niveles normales de azúcar en sangre[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosificación</span>
+                            <span class="spec-value">1 cápsula[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -199,8 +252,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">HGH CV</h3>
-                    <span class="etiqueta-toma">2 cápsulas al día</span>
-                    <p>Incremento de masa muscular, reducción de tejido adiposo y regeneración celular[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Momento de la toma</span>
+                            <span class="spec-value">Preferiblemente con las comidas[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Incremento de masa muscular y reducción de tejido adiposo; regeneración celular y vitalidad[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosificación</span>
+                            <span class="spec-value">2 cápsulas al día[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -211,8 +276,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">SLIM BURNER</h3>
-                    <span class="etiqueta-toma">Antes de comidas principales</span>
-                    <p>Control de glucemia, soporte de insulina y procesamiento eficiente de grasas[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Momento de la toma</span>
+                            <span class="spec-value">Con un vaso de agua antes de las comidas principales[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Control de glucemia y soporte de insulina; procesamiento eficiente de grasas y salud hepática[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosificación</span>
+                            <span class="spec-value">3 cápsulas[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -223,8 +300,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">PROSTA VITAL</h3>
-                    <span class="etiqueta-toma">Después de comer</span>
-                    <p>Soporte integral de próstata; favorece el flujo urinario normal[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Momento de la toma</span>
+                            <span class="spec-value">Después de una comida principal con un vaso de agua[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Soporte integral de la salud prostática; favorece el flujo urinario normal y reduce la frecuencia[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosificación</span>
+                            <span class="spec-value">1 cápsula al día[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -235,8 +324,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">TESTO VITAL</h3>
-                    <span class="etiqueta-toma">Con los alimentos</span>
-                    <p>Aumento de libido, mejora de circulación, energía y rendimiento físico[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Momento de la toma</span>
+                            <span class="spec-value">Preferiblemente junto con los alimentos[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Aumento de libido y deseo sexual; mejora la circulación, la energía y el rendimiento físico[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosificación</span>
+                            <span class="spec-value">1 cápsula[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -247,8 +348,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">POTENZIA MIEL</h3>
-                    <span class="etiqueta-toma">5-10 min antes</span>
-                    <p>Mejora del rendimiento sexual, aumento de libido y efecto de bombeo físico[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Momento de la toma</span>
+                            <span class="spec-value">5 a 10 minutos antes de la actividad sexual[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Mejora del rendimiento sexual; aumento de libido y efecto de bombeo físico[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosificación</span>
+                            <span class="spec-value">Beber todo el sobre[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -259,8 +372,16 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">DIABETIC PATCH</h3>
-                    <span class="etiqueta-toma">Uso Transdérmico (24h)</span>
-                    <p>Fórmula natural de soporte para personas con Diabetes Tipo I y II[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Tipo de producto</span>
+                            <span class="spec-value">Parche de absorción transdérmica (24h)[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Fórmula natural de soporte en personas con Diabetes Tipo I y II[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -271,8 +392,16 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">HIPERTENSIÓN PATCH</h3>
-                    <span class="etiqueta-toma">Uso Tópico</span>
-                    <p>Apoyo a la salud arterial y mantenimiento de los niveles de presión sanguínea[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Tipo de producto</span>
+                            <span class="spec-value">Parche para salud cardiovascular[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Apoyo a la salud arterial y mantenimiento de los niveles de presión sanguínea[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -283,8 +412,16 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">PARCHE PROSTÁTICO</h3>
-                    <span class="etiqueta-toma">Parche Herbal</span>
-                    <p>Alivio de micción frecuente, molestias de próstata y salud de la vejiga[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Tipo de producto</span>
+                            <span class="spec-value">Parche herbal de medicina tradicional[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Alivio de micción frecuente, molestias de próstata y salud general de la vejiga[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -295,8 +432,16 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">PARCHES PESO</h3>
-                    <span class="etiqueta-toma">Liberación Gradual</span>
-                    <p>Control del apetito, apoyo al metabolismo y quema de grasa localizada[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Tipo de producto</span>
+                            <span class="spec-value">Parche de liberación gradual de activos[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Control del apetito; apoyo al metabolismo; quema de grasa y tonificación local[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -307,8 +452,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">STUD 100 / SPRAY</h3>
-                    <span class="etiqueta-toma">5 min antes</span>
-                    <p>Spray retardante para el control de la eyaculación y mayor duración[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Tipo de producto</span>
+                            <span class="spec-value">Spray retardante[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Control de la eyaculación; mayor duración y satisfacción en la pareja[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Modo de uso</span>
+                            <span class="spec-value">Aplicar en el glande 5 minutos antes del acto sexual[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -319,8 +476,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">BIG XXL CREMA</h3>
-                    <span class="etiqueta-toma">10-15 min antes</span>
-                    <p>Crema de aplicación local con efecto temporal de volumen, firmeza y retardante[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Tipo de producto</span>
+                            <span class="spec-value">Crema de aplicación local[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Efecto temporal de volumen y mayor firmeza; acción retardante[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Modo de uso</span>
+                            <span class="spec-value">Aplicar con miembro erecto/semierecto en masaje 10-15 min antes[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -331,8 +500,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">MAXMAN GEL</h3>
-                    <span class="etiqueta-toma">Uso Tópico</span>
-                    <p>Gel estimulante para erecciones más firmes y efecto retardante[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Tipo de producto</span>
+                            <span class="spec-value">Gel estimulante[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios clave</span>
+                            <span class="spec-value">Erecciones más firmes y efecto retardante[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Modo de uso</span>
+                            <span class="spec-value">Usar antes del encuentro. Lavar si hay sexo oral por sabor amargo[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -343,8 +524,16 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">ELASTIC RING</h3>
-                    <span class="etiqueta-toma">Accesorio</span>
-                    <p>Anillo de constricción para mantener erecciones firmes y retrasar la eyaculación[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Categoría</span>
+                            <span class="spec-value">Anillo de constricción[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios técnicos</span>
+                            <span class="spec-value">Mantiene una erección más firme y duradera; retrasa la eyaculación por retención sanguínea[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -355,8 +544,20 @@
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-titulo">ELECTRIC PUMP</h3>
-                    <span class="etiqueta-toma">Dispositivo</span>
-                    <p>Bomba de vacío automática no invasiva para inducir flujo sanguíneo y rehabilitación[cite: 1].</p>
+                    <div class="wiki-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Categoría</span>
+                            <span class="spec-value">Bomba de vacío automática[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Beneficios técnicos</span>
+                            <span class="spec-value">Dispositivo no invasivo para inducir el flujo sanguíneo y tratar disfunción[cite: 1].</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Nota de seguridad</span>
+                            <span class="spec-value">No produce aumento permanente. Uso exclusivo en rehabilitación[cite: 1].</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
